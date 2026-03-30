@@ -13,6 +13,7 @@ import com.testing.bookingsys.integration.VerifyEmailGateway;
 import com.testing.bookingsys.repository.UserRepository;
 import com.testing.bookingsys.security.JwtService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.User;
@@ -25,6 +26,7 @@ import java.util.Set;
 import java.util.UUID;
 
 @Service
+@Slf4j
 @RequiredArgsConstructor
 public class AuthService {
 
@@ -103,6 +105,7 @@ public class AuthService {
         AppUser user = userRepository.findByEmailIgnoreCase(request.getEmail())
                 .orElseThrow(() -> new ApiException("User not found"));
         user.setResetPasswordToken(UUID.randomUUID().toString());
+        log.info("Generated reset password token for {}: {}", user.getEmail(), user.getResetPasswordToken());
         if (!verifyEmailGateway.sendVerifyEmail(user.getEmail(), user.getResetPasswordToken())) {
             throw new ApiException("Mock reset password email failed");
         }
@@ -121,3 +124,4 @@ public class AuthService {
         return Map.of("message", "Password reset successful");
     }
 }
+

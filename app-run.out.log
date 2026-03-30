@@ -5044,3 +5044,2254 @@ Hibernate:
     where
         b1_0.status=? 
         and s1_0.end_time<?
+2026-03-29T23:54:59.660+06:30 DEBUG 18124 --- [bookingsys] [eduler_Worker-3] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    join
+        class_schedules s1_0 
+            on s1_0.id=b1_0.schedule_id 
+    where
+        b1_0.status=? 
+        and s1_0.end_time<?
+Hibernate: 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    join
+        class_schedules s1_0 
+            on s1_0.id=b1_0.schedule_id 
+    where
+        b1_0.status=? 
+        and s1_0.end_time<?
+2026-03-29T23:59:24.627+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+Hibernate: 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+2026-03-29T23:59:24.942+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-03-29T23:59:25.012+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/bookings/me", parameters={}
+2026-03-29T23:59:25.018+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.testing.bookingsys.controller.ScheduleController#myBookings()
+2026-03-29T23:59:25.043+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+Hibernate: 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+2026-03-29T23:59:25.062+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-03-29T23:59:25.087+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    where
+        b1_0.user_id=? 
+    order by
+        b1_0.booked_at desc
+Hibernate: 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    where
+        b1_0.user_id=? 
+    order by
+        b1_0.booked_at desc
+2026-03-29T23:59:25.221+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        cs1_0.id,
+        cs1_0.capacity,
+        cs1_0.country_id,
+        cs1_0.created_at,
+        cs1_0.description,
+        cs1_0.end_time,
+        cs1_0.required_credits,
+        cs1_0.start_time,
+        cs1_0.title,
+        cs1_0.updated_at,
+        cs1_0.version 
+    from
+        class_schedules cs1_0 
+    where
+        cs1_0.id=?
+Hibernate: 
+    select
+        cs1_0.id,
+        cs1_0.capacity,
+        cs1_0.country_id,
+        cs1_0.created_at,
+        cs1_0.description,
+        cs1_0.end_time,
+        cs1_0.required_credits,
+        cs1_0.start_time,
+        cs1_0.title,
+        cs1_0.updated_at,
+        cs1_0.version 
+    from
+        class_schedules cs1_0 
+    where
+        cs1_0.id=?
+2026-03-29T23:59:25.235+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.code,
+        c1_0.created_at,
+        c1_0.name,
+        c1_0.updated_at 
+    from
+        countries c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.code,
+        c1_0.created_at,
+        c1_0.name,
+        c1_0.updated_at 
+    from
+        countries c1_0 
+    where
+        c1_0.id=?
+2026-03-29T23:59:25.281+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-03-29T23:59:25.291+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.testing.bookingsys.dto.schedule.BookingResponse@fcd4ea0, com.testing.bookingsys.dto.schedule.Bo (truncated)...]
+2026-03-29T23:59:25.334+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-03-29T23:59:59.600+06:30 DEBUG 18124 --- [bookingsys] [eduler_Worker-4] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    join
+        class_schedules s1_0 
+            on s1_0.id=b1_0.schedule_id 
+    where
+        b1_0.status=? 
+        and s1_0.end_time<?
+Hibernate: 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    join
+        class_schedules s1_0 
+            on s1_0.id=b1_0.schedule_id 
+    where
+        b1_0.status=? 
+        and s1_0.end_time<?
+2026-03-30T00:00:58.932+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/admin/schedules", parameters={}
+2026-03-30T00:00:58.935+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.testing.bookingsys.controller.AdminController#createSchedule(AdminScheduleRequest)
+2026-03-30T00:00:58.960+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.testing.bookingsys.dto.schedule.AdminScheduleRequest@7a846335]
+2026-03-30T00:00:58.989+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.code,
+        c1_0.created_at,
+        c1_0.name,
+        c1_0.updated_at 
+    from
+        countries c1_0 
+    where
+        upper(c1_0.code)=upper(?)
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.code,
+        c1_0.created_at,
+        c1_0.name,
+        c1_0.updated_at 
+    from
+        countries c1_0 
+    where
+        upper(c1_0.code)=upper(?)
+2026-03-30T00:00:59.018+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-8] org.hibernate.SQL                        : 
+    insert 
+    into
+        class_schedules
+        (capacity, country_id, created_at, description, end_time, required_credits, start_time, title, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+Hibernate: 
+    insert 
+    into
+        class_schedules
+        (capacity, country_id, created_at, description, end_time, required_credits, start_time, title, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-03-30T00:00:59.086+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-03-30T00:00:59.088+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.testing.bookingsys.entity.ClassSchedule@37cedfc2]
+2026-03-30T00:00:59.092+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-03-30T00:01:29.318+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+Hibernate: 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+2026-03-30T00:01:29.327+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-03-30T00:01:29.338+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/schedules/3/book", parameters={}
+2026-03-30T00:01:29.339+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.testing.bookingsys.controller.ScheduleController#bookClass(Long, BookClassRequest)
+2026-03-30T00:01:29.354+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.testing.bookingsys.dto.schedule.BookClassRequest@18544893]
+2026-03-30T00:01:29.369+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+Hibernate: 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+2026-03-30T00:01:29.377+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-03-30T00:01:29.445+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        cs1_0.id,
+        cs1_0.capacity,
+        cs1_0.country_id,
+        cs1_0.created_at,
+        cs1_0.description,
+        cs1_0.end_time,
+        cs1_0.required_credits,
+        cs1_0.start_time,
+        cs1_0.title,
+        cs1_0.updated_at,
+        cs1_0.version 
+    from
+        class_schedules cs1_0 
+    where
+        cs1_0.id=? for no key update
+Hibernate: 
+    select
+        cs1_0.id,
+        cs1_0.capacity,
+        cs1_0.country_id,
+        cs1_0.created_at,
+        cs1_0.description,
+        cs1_0.end_time,
+        cs1_0.required_credits,
+        cs1_0.start_time,
+        cs1_0.title,
+        cs1_0.updated_at,
+        cs1_0.version 
+    from
+        class_schedules cs1_0 
+    where
+        cs1_0.id=? for no key update
+2026-03-30T00:01:29.509+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.testing.bookingsys.exception.GlobalExceptionHandler#handleBadRequest(RuntimeException)
+2026-03-30T00:01:29.511+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-03-30T00:01:29.519+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{error=Bad Request, message=Cannot book a class that already started, timestamp=2026-03-30T00:01:29. (truncated)...]
+2026-03-30T00:01:29.522+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.testing.bookingsys.exception.ApiException: Cannot book a class that already started]
+2026-03-30T00:01:29.524+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2026-03-30T00:01:59.493+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/admin/schedules", parameters={}
+2026-03-30T00:01:59.494+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.testing.bookingsys.controller.AdminController#createSchedule(AdminScheduleRequest)
+2026-03-30T00:01:59.500+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.testing.bookingsys.dto.schedule.AdminScheduleRequest@523ee069]
+2026-03-30T00:01:59.512+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.code,
+        c1_0.created_at,
+        c1_0.name,
+        c1_0.updated_at 
+    from
+        countries c1_0 
+    where
+        upper(c1_0.code)=upper(?)
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.code,
+        c1_0.created_at,
+        c1_0.name,
+        c1_0.updated_at 
+    from
+        countries c1_0 
+    where
+        upper(c1_0.code)=upper(?)
+2026-03-30T00:01:59.518+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-7] org.hibernate.SQL                        : 
+    insert 
+    into
+        class_schedules
+        (capacity, country_id, created_at, description, end_time, required_credits, start_time, title, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+Hibernate: 
+    insert 
+    into
+        class_schedules
+        (capacity, country_id, created_at, description, end_time, required_credits, start_time, title, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-03-30T00:01:59.530+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-03-30T00:01:59.531+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.testing.bookingsys.entity.ClassSchedule@2077cc2a]
+2026-03-30T00:01:59.534+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-03-30T00:02:11.082+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+Hibernate: 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+2026-03-30T00:02:11.097+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-03-30T00:02:11.112+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/schedules/4/book", parameters={}
+2026-03-30T00:02:11.120+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.testing.bookingsys.controller.ScheduleController#bookClass(Long, BookClassRequest)
+2026-03-30T00:02:11.134+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.testing.bookingsys.dto.schedule.BookClassRequest@19bfffba]
+2026-03-30T00:02:11.149+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+Hibernate: 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+2026-03-30T00:02:11.169+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-03-30T00:02:11.187+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        cs1_0.id,
+        cs1_0.capacity,
+        cs1_0.country_id,
+        cs1_0.created_at,
+        cs1_0.description,
+        cs1_0.end_time,
+        cs1_0.required_credits,
+        cs1_0.start_time,
+        cs1_0.title,
+        cs1_0.updated_at,
+        cs1_0.version 
+    from
+        class_schedules cs1_0 
+    where
+        cs1_0.id=? for no key update
+Hibernate: 
+    select
+        cs1_0.id,
+        cs1_0.capacity,
+        cs1_0.country_id,
+        cs1_0.created_at,
+        cs1_0.description,
+        cs1_0.end_time,
+        cs1_0.required_credits,
+        cs1_0.start_time,
+        cs1_0.title,
+        cs1_0.updated_at,
+        cs1_0.version 
+    from
+        class_schedules cs1_0 
+    where
+        cs1_0.id=? for no key update
+2026-03-30T00:02:11.204+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        b1_0.id 
+    from
+        bookings b1_0 
+    where
+        b1_0.user_id=? 
+        and b1_0.schedule_id=? 
+        and b1_0.status in (?, ?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        b1_0.id 
+    from
+        bookings b1_0 
+    where
+        b1_0.user_id=? 
+        and b1_0.schedule_id=? 
+        and b1_0.status in (?, ?) 
+    fetch
+        first ? rows only
+2026-03-30T00:02:11.228+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    join
+        class_schedules s1_0 
+            on s1_0.id=b1_0.schedule_id 
+    where
+        b1_0.user_id=? 
+        and b1_0.status in (?) 
+        and s1_0.start_time<? 
+        and s1_0.end_time>?
+Hibernate: 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    join
+        class_schedules s1_0 
+            on s1_0.id=b1_0.schedule_id 
+    where
+        b1_0.user_id=? 
+        and b1_0.status in (?) 
+        and s1_0.start_time<? 
+        and s1_0.end_time>?
+2026-03-30T00:02:11.239+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.code,
+        c1_0.created_at,
+        c1_0.name,
+        c1_0.updated_at 
+    from
+        countries c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.code,
+        c1_0.created_at,
+        c1_0.name,
+        c1_0.updated_at 
+    from
+        countries c1_0 
+    where
+        c1_0.id=?
+2026-03-30T00:02:11.264+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        pp1_0.id,
+        pp1_0.created_at,
+        pp1_0.expires_at,
+        pp1_0.package_catalog_id,
+        pp1_0.purchased_at,
+        pp1_0.remaining_credits,
+        pp1_0.status,
+        pp1_0.total_credits,
+        pp1_0.updated_at,
+        pp1_0.user_id 
+    from
+        purchased_packages pp1_0 
+    where
+        pp1_0.id=? 
+        and pp1_0.user_id=?
+Hibernate: 
+    select
+        pp1_0.id,
+        pp1_0.created_at,
+        pp1_0.expires_at,
+        pp1_0.package_catalog_id,
+        pp1_0.purchased_at,
+        pp1_0.remaining_credits,
+        pp1_0.status,
+        pp1_0.total_credits,
+        pp1_0.updated_at,
+        pp1_0.user_id 
+    from
+        purchased_packages pp1_0 
+    where
+        pp1_0.id=? 
+        and pp1_0.user_id=?
+2026-03-30T00:02:11.301+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.testing.bookingsys.exception.GlobalExceptionHandler#handleBadRequest(RuntimeException)
+2026-03-30T00:02:11.303+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-03-30T00:02:11.304+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{error=Bad Request, message=Selected package is not active, timestamp=2026-03-30T00:02:11.302402600, (truncated)...]
+2026-03-30T00:02:11.306+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.testing.bookingsys.exception.ApiException: Selected package is not active]
+2026-03-30T00:02:11.308+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2026-03-30T00:02:25.528+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+Hibernate: 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+2026-03-30T00:02:25.535+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-03-30T00:02:25.545+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/packages/me", parameters={}
+2026-03-30T00:02:25.546+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.testing.bookingsys.controller.PackageController#myPackages()
+2026-03-30T00:02:25.549+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+Hibernate: 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+2026-03-30T00:02:25.553+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-03-30T00:02:25.569+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        pp1_0.id,
+        pp1_0.created_at,
+        pp1_0.expires_at,
+        pp1_0.package_catalog_id,
+        pp1_0.purchased_at,
+        pp1_0.remaining_credits,
+        pp1_0.status,
+        pp1_0.total_credits,
+        pp1_0.updated_at,
+        pp1_0.user_id 
+    from
+        purchased_packages pp1_0 
+    where
+        pp1_0.user_id=? 
+    order by
+        pp1_0.expires_at
+Hibernate: 
+    select
+        pp1_0.id,
+        pp1_0.created_at,
+        pp1_0.expires_at,
+        pp1_0.package_catalog_id,
+        pp1_0.purchased_at,
+        pp1_0.remaining_credits,
+        pp1_0.status,
+        pp1_0.total_credits,
+        pp1_0.updated_at,
+        pp1_0.user_id 
+    from
+        purchased_packages pp1_0 
+    where
+        pp1_0.user_id=? 
+    order by
+        pp1_0.expires_at
+2026-03-30T00:02:25.579+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        pc1_0.id,
+        pc1_0.active,
+        pc1_0.country_id,
+        pc1_0.created_at,
+        pc1_0.credits,
+        pc1_0.name,
+        pc1_0.price,
+        pc1_0.updated_at,
+        pc1_0.validity_days 
+    from
+        package_catalogs pc1_0 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.active,
+        pc1_0.country_id,
+        pc1_0.created_at,
+        pc1_0.credits,
+        pc1_0.name,
+        pc1_0.price,
+        pc1_0.updated_at,
+        pc1_0.validity_days 
+    from
+        package_catalogs pc1_0 
+    where
+        pc1_0.id=?
+2026-03-30T00:02:25.589+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.code,
+        c1_0.created_at,
+        c1_0.name,
+        c1_0.updated_at 
+    from
+        countries c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.code,
+        c1_0.created_at,
+        c1_0.name,
+        c1_0.updated_at 
+    from
+        countries c1_0 
+    where
+        c1_0.id=?
+2026-03-30T00:02:25.599+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-03-30T00:02:25.600+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.testing.bookingsys.dto.packageinfo.PurchasedPackageResponse@c76529]]
+2026-03-30T00:02:25.603+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-03-30T00:03:12.529+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/admin/packages", parameters={}
+2026-03-30T00:03:12.531+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.testing.bookingsys.controller.AdminController#createPackage(AdminPackageCatalogRequest)
+2026-03-30T00:03:12.536+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.testing.bookingsys.dto.packageinfo.AdminPackageCatalogRequest@6979c7b5]
+2026-03-30T00:03:12.545+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.code,
+        c1_0.created_at,
+        c1_0.name,
+        c1_0.updated_at 
+    from
+        countries c1_0 
+    where
+        upper(c1_0.code)=upper(?)
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.code,
+        c1_0.created_at,
+        c1_0.name,
+        c1_0.updated_at 
+    from
+        countries c1_0 
+    where
+        upper(c1_0.code)=upper(?)
+2026-03-30T00:03:12.553+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-5] org.hibernate.SQL                        : 
+    insert 
+    into
+        package_catalogs
+        (active, country_id, created_at, credits, name, price, updated_at, validity_days) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+Hibernate: 
+    insert 
+    into
+        package_catalogs
+        (active, country_id, created_at, credits, name, price, updated_at, validity_days) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-03-30T00:03:12.566+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-03-30T00:03:12.567+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.testing.bookingsys.entity.PackageCatalog@5e820f4a]
+2026-03-30T00:03:12.570+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-03-30T00:03:39.340+06:30 DEBUG 18124 --- [bookingsys] [io-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+Hibernate: 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+2026-03-30T00:03:39.353+06:30 DEBUG 18124 --- [bookingsys] [io-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-03-30T00:03:39.364+06:30 DEBUG 18124 --- [bookingsys] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/api/packages/purchase", parameters={}
+2026-03-30T00:03:39.365+06:30 DEBUG 18124 --- [bookingsys] [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.testing.bookingsys.controller.PackageController#purchase(PurchasePackageRequest)
+2026-03-30T00:03:39.369+06:30 DEBUG 18124 --- [bookingsys] [io-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.testing.bookingsys.dto.packageinfo.PurchasePackageRequest@1d18a344]
+2026-03-30T00:03:39.374+06:30 DEBUG 18124 --- [bookingsys] [io-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        pc1_0.id,
+        pc1_0.active,
+        pc1_0.country_id,
+        pc1_0.created_at,
+        pc1_0.credits,
+        pc1_0.name,
+        pc1_0.price,
+        pc1_0.updated_at,
+        pc1_0.validity_days 
+    from
+        package_catalogs pc1_0 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.active,
+        pc1_0.country_id,
+        pc1_0.created_at,
+        pc1_0.credits,
+        pc1_0.name,
+        pc1_0.price,
+        pc1_0.updated_at,
+        pc1_0.validity_days 
+    from
+        package_catalogs pc1_0 
+    where
+        pc1_0.id=?
+2026-03-30T00:03:39.383+06:30 DEBUG 18124 --- [bookingsys] [io-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+Hibernate: 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+2026-03-30T00:03:39.387+06:30 DEBUG 18124 --- [bookingsys] [io-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-03-30T00:03:39.392+06:30 DEBUG 18124 --- [bookingsys] [io-8080-exec-10] org.hibernate.SQL                        : 
+    insert 
+    into
+        purchased_packages
+        (created_at, expires_at, package_catalog_id, purchased_at, remaining_credits, status, total_credits, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+Hibernate: 
+    insert 
+    into
+        purchased_packages
+        (created_at, expires_at, package_catalog_id, purchased_at, remaining_credits, status, total_credits, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-03-30T00:03:39.401+06:30 DEBUG 18124 --- [bookingsys] [io-8080-exec-10] org.hibernate.SQL                        : 
+    insert 
+    into
+        credit_transactions
+        (balance_after, created_at, delta_credit, purchased_package_id, remarks, schedule_id, type, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+Hibernate: 
+    insert 
+    into
+        credit_transactions
+        (balance_after, created_at, delta_credit, purchased_package_id, remarks, schedule_id, type, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-03-30T00:03:39.411+06:30 DEBUG 18124 --- [bookingsys] [io-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.code,
+        c1_0.created_at,
+        c1_0.name,
+        c1_0.updated_at 
+    from
+        countries c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.code,
+        c1_0.created_at,
+        c1_0.name,
+        c1_0.updated_at 
+    from
+        countries c1_0 
+    where
+        c1_0.id=?
+2026-03-30T00:03:39.424+06:30 DEBUG 18124 --- [bookingsys] [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-03-30T00:03:39.425+06:30 DEBUG 18124 --- [bookingsys] [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.testing.bookingsys.dto.packageinfo.PurchasedPackageResponse@56d7a8b0]
+2026-03-30T00:03:39.427+06:30 DEBUG 18124 --- [bookingsys] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-03-30T00:03:58.911+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+Hibernate: 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+2026-03-30T00:03:58.918+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-03-30T00:03:58.923+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/schedules/4/book", parameters={}
+2026-03-30T00:03:58.924+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.testing.bookingsys.controller.ScheduleController#bookClass(Long, BookClassRequest)
+2026-03-30T00:03:58.928+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.testing.bookingsys.dto.schedule.BookClassRequest@370b6f8c]
+2026-03-30T00:03:58.931+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+Hibernate: 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+2026-03-30T00:03:58.935+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-03-30T00:03:58.946+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        cs1_0.id,
+        cs1_0.capacity,
+        cs1_0.country_id,
+        cs1_0.created_at,
+        cs1_0.description,
+        cs1_0.end_time,
+        cs1_0.required_credits,
+        cs1_0.start_time,
+        cs1_0.title,
+        cs1_0.updated_at,
+        cs1_0.version 
+    from
+        class_schedules cs1_0 
+    where
+        cs1_0.id=? for no key update
+Hibernate: 
+    select
+        cs1_0.id,
+        cs1_0.capacity,
+        cs1_0.country_id,
+        cs1_0.created_at,
+        cs1_0.description,
+        cs1_0.end_time,
+        cs1_0.required_credits,
+        cs1_0.start_time,
+        cs1_0.title,
+        cs1_0.updated_at,
+        cs1_0.version 
+    from
+        class_schedules cs1_0 
+    where
+        cs1_0.id=? for no key update
+2026-03-30T00:03:58.954+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        b1_0.id 
+    from
+        bookings b1_0 
+    where
+        b1_0.user_id=? 
+        and b1_0.schedule_id=? 
+        and b1_0.status in (?, ?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        b1_0.id 
+    from
+        bookings b1_0 
+    where
+        b1_0.user_id=? 
+        and b1_0.schedule_id=? 
+        and b1_0.status in (?, ?) 
+    fetch
+        first ? rows only
+2026-03-30T00:03:58.962+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    join
+        class_schedules s1_0 
+            on s1_0.id=b1_0.schedule_id 
+    where
+        b1_0.user_id=? 
+        and b1_0.status in (?) 
+        and s1_0.start_time<? 
+        and s1_0.end_time>?
+Hibernate: 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    join
+        class_schedules s1_0 
+            on s1_0.id=b1_0.schedule_id 
+    where
+        b1_0.user_id=? 
+        and b1_0.status in (?) 
+        and s1_0.start_time<? 
+        and s1_0.end_time>?
+2026-03-30T00:03:58.966+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.code,
+        c1_0.created_at,
+        c1_0.name,
+        c1_0.updated_at 
+    from
+        countries c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.code,
+        c1_0.created_at,
+        c1_0.name,
+        c1_0.updated_at 
+    from
+        countries c1_0 
+    where
+        c1_0.id=?
+2026-03-30T00:03:58.973+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        pp1_0.id,
+        pp1_0.created_at,
+        pp1_0.expires_at,
+        pp1_0.package_catalog_id,
+        pp1_0.purchased_at,
+        pp1_0.remaining_credits,
+        pp1_0.status,
+        pp1_0.total_credits,
+        pp1_0.updated_at,
+        pp1_0.user_id 
+    from
+        purchased_packages pp1_0 
+    where
+        pp1_0.id=? 
+        and pp1_0.user_id=?
+Hibernate: 
+    select
+        pp1_0.id,
+        pp1_0.created_at,
+        pp1_0.expires_at,
+        pp1_0.package_catalog_id,
+        pp1_0.purchased_at,
+        pp1_0.remaining_credits,
+        pp1_0.status,
+        pp1_0.total_credits,
+        pp1_0.updated_at,
+        pp1_0.user_id 
+    from
+        purchased_packages pp1_0 
+    where
+        pp1_0.id=? 
+        and pp1_0.user_id=?
+2026-03-30T00:03:58.980+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        pc1_0.id,
+        pc1_0.active,
+        pc1_0.country_id,
+        pc1_0.created_at,
+        pc1_0.credits,
+        pc1_0.name,
+        pc1_0.price,
+        pc1_0.updated_at,
+        pc1_0.validity_days 
+    from
+        package_catalogs pc1_0 
+    where
+        pc1_0.id=?
+Hibernate: 
+    select
+        pc1_0.id,
+        pc1_0.active,
+        pc1_0.country_id,
+        pc1_0.created_at,
+        pc1_0.credits,
+        pc1_0.name,
+        pc1_0.price,
+        pc1_0.updated_at,
+        pc1_0.validity_days 
+    from
+        package_catalogs pc1_0 
+    where
+        pc1_0.id=?
+2026-03-30T00:03:58.991+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        count(b1_0.id) 
+    from
+        bookings b1_0 
+    where
+        b1_0.schedule_id=? 
+        and b1_0.status=?
+Hibernate: 
+    select
+        count(b1_0.id) 
+    from
+        bookings b1_0 
+    where
+        b1_0.schedule_id=? 
+        and b1_0.status=?
+2026-03-30T00:03:59.005+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        bookings
+        (booked_at, cancelled_at, checked_in_at, created_at, credits_charged, purchased_package_id, schedule_id, status, updated_at, user_id, waitlist_position) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+Hibernate: 
+    insert 
+    into
+        bookings
+        (booked_at, cancelled_at, checked_in_at, created_at, credits_charged, purchased_package_id, schedule_id, status, updated_at, user_id, waitlist_position) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-03-30T00:03:59.018+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        credit_transactions
+        (balance_after, created_at, delta_credit, purchased_package_id, remarks, schedule_id, type, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+Hibernate: 
+    insert 
+    into
+        credit_transactions
+        (balance_after, created_at, delta_credit, purchased_package_id, remarks, schedule_id, type, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-03-30T00:03:59.033+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        purchased_packages 
+    set
+        expires_at=?,
+        package_catalog_id=?,
+        purchased_at=?,
+        remaining_credits=?,
+        status=?,
+        total_credits=?,
+        updated_at=?,
+        user_id=? 
+    where
+        id=?
+Hibernate: 
+    update
+        purchased_packages 
+    set
+        expires_at=?,
+        package_catalog_id=?,
+        purchased_at=?,
+        remaining_credits=?,
+        status=?,
+        total_credits=?,
+        updated_at=?,
+        user_id=? 
+    where
+        id=?
+2026-03-30T00:03:59.053+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-03-30T00:03:59.053+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.testing.bookingsys.dto.schedule.BookingResponse@687f51b1]
+2026-03-30T00:03:59.056+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-03-30T00:04:24.132+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+Hibernate: 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+2026-03-30T00:04:24.175+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-03-30T00:04:24.186+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/bookings/me", parameters={}
+2026-03-30T00:04:24.187+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.testing.bookingsys.controller.ScheduleController#myBookings()
+2026-03-30T00:04:24.191+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+Hibernate: 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+2026-03-30T00:04:24.195+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-03-30T00:04:24.200+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    where
+        b1_0.user_id=? 
+    order by
+        b1_0.booked_at desc
+Hibernate: 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    where
+        b1_0.user_id=? 
+    order by
+        b1_0.booked_at desc
+2026-03-30T00:04:24.207+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        cs1_0.id,
+        cs1_0.capacity,
+        cs1_0.country_id,
+        cs1_0.created_at,
+        cs1_0.description,
+        cs1_0.end_time,
+        cs1_0.required_credits,
+        cs1_0.start_time,
+        cs1_0.title,
+        cs1_0.updated_at,
+        cs1_0.version 
+    from
+        class_schedules cs1_0 
+    where
+        cs1_0.id=?
+Hibernate: 
+    select
+        cs1_0.id,
+        cs1_0.capacity,
+        cs1_0.country_id,
+        cs1_0.created_at,
+        cs1_0.description,
+        cs1_0.end_time,
+        cs1_0.required_credits,
+        cs1_0.start_time,
+        cs1_0.title,
+        cs1_0.updated_at,
+        cs1_0.version 
+    from
+        class_schedules cs1_0 
+    where
+        cs1_0.id=?
+2026-03-30T00:04:24.212+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.code,
+        c1_0.created_at,
+        c1_0.name,
+        c1_0.updated_at 
+    from
+        countries c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.code,
+        c1_0.created_at,
+        c1_0.name,
+        c1_0.updated_at 
+    from
+        countries c1_0 
+    where
+        c1_0.id=?
+2026-03-30T00:04:24.215+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        cs1_0.id,
+        cs1_0.capacity,
+        cs1_0.country_id,
+        cs1_0.created_at,
+        cs1_0.description,
+        cs1_0.end_time,
+        cs1_0.required_credits,
+        cs1_0.start_time,
+        cs1_0.title,
+        cs1_0.updated_at,
+        cs1_0.version 
+    from
+        class_schedules cs1_0 
+    where
+        cs1_0.id=?
+Hibernate: 
+    select
+        cs1_0.id,
+        cs1_0.capacity,
+        cs1_0.country_id,
+        cs1_0.created_at,
+        cs1_0.description,
+        cs1_0.end_time,
+        cs1_0.required_credits,
+        cs1_0.start_time,
+        cs1_0.title,
+        cs1_0.updated_at,
+        cs1_0.version 
+    from
+        class_schedules cs1_0 
+    where
+        cs1_0.id=?
+2026-03-30T00:04:24.219+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-03-30T00:04:24.221+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.testing.bookingsys.dto.schedule.BookingResponse@67e308c4, com.testing.bookingsys.dto.schedule.B (truncated)...]
+2026-03-30T00:04:24.226+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-03-30T00:04:54.153+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+Hibernate: 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+2026-03-30T00:04:54.197+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-03-30T00:04:54.208+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/bookings/3/check-in", parameters={}
+2026-03-30T00:04:54.209+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.testing.bookingsys.controller.ScheduleController#checkIn(Long)
+2026-03-30T00:04:54.215+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+Hibernate: 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+2026-03-30T00:04:54.224+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-03-30T00:04:54.230+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    where
+        b1_0.id=? 
+        and b1_0.user_id=?
+Hibernate: 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    where
+        b1_0.id=? 
+        and b1_0.user_id=?
+2026-03-30T00:04:54.238+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        cs1_0.id,
+        cs1_0.capacity,
+        cs1_0.country_id,
+        cs1_0.created_at,
+        cs1_0.description,
+        cs1_0.end_time,
+        cs1_0.required_credits,
+        cs1_0.start_time,
+        cs1_0.title,
+        cs1_0.updated_at,
+        cs1_0.version 
+    from
+        class_schedules cs1_0 
+    where
+        cs1_0.id=?
+Hibernate: 
+    select
+        cs1_0.id,
+        cs1_0.capacity,
+        cs1_0.country_id,
+        cs1_0.created_at,
+        cs1_0.description,
+        cs1_0.end_time,
+        cs1_0.required_credits,
+        cs1_0.start_time,
+        cs1_0.title,
+        cs1_0.updated_at,
+        cs1_0.version 
+    from
+        class_schedules cs1_0 
+    where
+        cs1_0.id=?
+2026-03-30T00:04:54.244+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.testing.bookingsys.exception.GlobalExceptionHandler#handleBadRequest(RuntimeException)
+2026-03-30T00:04:54.245+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-03-30T00:04:54.246+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{error=Bad Request, message=Check-in is allowed only during class time, timestamp=2026-03-30T00:04:5 (truncated)...]
+2026-03-30T00:04:54.247+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.testing.bookingsys.exception.ApiException: Check-in is allowed only during class time]
+2026-03-30T00:04:54.249+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2026-03-30T00:04:59.556+06:30 DEBUG 18124 --- [bookingsys] [eduler_Worker-5] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    join
+        class_schedules s1_0 
+            on s1_0.id=b1_0.schedule_id 
+    where
+        b1_0.status=? 
+        and s1_0.end_time<?
+Hibernate: 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    join
+        class_schedules s1_0 
+            on s1_0.id=b1_0.schedule_id 
+    where
+        b1_0.status=? 
+        and s1_0.end_time<?
+2026-03-30T00:05:03.081+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+Hibernate: 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+2026-03-30T00:05:03.090+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-03-30T00:05:03.097+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/bookings/4/check-in", parameters={}
+2026-03-30T00:05:03.098+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.testing.bookingsys.controller.ScheduleController#checkIn(Long)
+2026-03-30T00:05:03.103+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+Hibernate: 
+    select
+        au1_0.id,
+        au1_0.created_at,
+        au1_0.email,
+        au1_0.full_name,
+        au1_0.password,
+        au1_0.reset_password_token,
+        au1_0.updated_at,
+        au1_0.verification_token,
+        au1_0.verified 
+    from
+        app_users au1_0 
+    where
+        upper(au1_0.email)=upper(?)
+2026-03-30T00:05:03.107+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_0.role_name 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-03-30T00:05:03.114+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    where
+        b1_0.id=? 
+        and b1_0.user_id=?
+Hibernate: 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    where
+        b1_0.id=? 
+        and b1_0.user_id=?
+2026-03-30T00:05:03.123+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.testing.bookingsys.exception.GlobalExceptionHandler#handleBadRequest(RuntimeException)
+2026-03-30T00:05:03.124+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-03-30T00:05:03.125+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{error=Bad Request, message=Booking not found, timestamp=2026-03-30T00:05:03.123977800, status=400}]
+2026-03-30T00:05:03.126+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.testing.bookingsys.exception.ApiException: Booking not found]
+2026-03-30T00:05:03.127+06:30 DEBUG 18124 --- [bookingsys] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2026-03-30T00:09:59.612+06:30 DEBUG 18124 --- [bookingsys] [eduler_Worker-6] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    join
+        class_schedules s1_0 
+            on s1_0.id=b1_0.schedule_id 
+    where
+        b1_0.status=? 
+        and s1_0.end_time<?
+Hibernate: 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    join
+        class_schedules s1_0 
+            on s1_0.id=b1_0.schedule_id 
+    where
+        b1_0.status=? 
+        and s1_0.end_time<?
+2026-03-30T00:14:59.749+06:30 DEBUG 18124 --- [bookingsys] [eduler_Worker-7] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    join
+        class_schedules s1_0 
+            on s1_0.id=b1_0.schedule_id 
+    where
+        b1_0.status=? 
+        and s1_0.end_time<?
+Hibernate: 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    join
+        class_schedules s1_0 
+            on s1_0.id=b1_0.schedule_id 
+    where
+        b1_0.status=? 
+        and s1_0.end_time<?
+2026-03-30T00:20:00.240+06:30 DEBUG 18124 --- [bookingsys] [eduler_Worker-8] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    join
+        class_schedules s1_0 
+            on s1_0.id=b1_0.schedule_id 
+    where
+        b1_0.status=? 
+        and s1_0.end_time<?
+Hibernate: 
+    select
+        b1_0.id,
+        b1_0.booked_at,
+        b1_0.cancelled_at,
+        b1_0.checked_in_at,
+        b1_0.created_at,
+        b1_0.credits_charged,
+        b1_0.purchased_package_id,
+        b1_0.schedule_id,
+        b1_0.status,
+        b1_0.updated_at,
+        b1_0.user_id,
+        b1_0.waitlist_position 
+    from
+        bookings b1_0 
+    join
+        class_schedules s1_0 
+            on s1_0.id=b1_0.schedule_id 
+    where
+        b1_0.status=? 
+        and s1_0.end_time<?
+2026-03-30T08:22:48.966+06:30  WARN 18124 --- [bookingsys] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7h59m33s945ms742µs100ns).
+2026-03-30T08:23:48.299+06:30  WARN 18124 --- [bookingsys] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s439ms786µs).

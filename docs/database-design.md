@@ -93,3 +93,8 @@ Rules covered by this schema:
 - Purchased package inherits credit amount and expiration snapshot.
 - Booking always points to the package whose credits were reserved or refunded.
 - Waitlist is modeled through `BOOKINGS.status = WAITLISTED` with FIFO via `waitlist_position`.
+
+Downloadable file:
+
+- docs/database-structure.svg`r
+
